@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Lista de Lenguajes</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{ url_for('static', filename='style.')}"
-    />
-  </head>
-  <body>
-    <h1>Lenguajes</h1>
+<title>{% block title %}{% endblock %} -</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<nav>
+  <h1>Lenguajes</h1>
+  <body class="html">
     <ul>
-      {% for lenguaje in lenguajes %}
-      <li>{{ lenguaje['name'] }}</li>
+      {% for actor in actores %}
+      <li>{{lenguaje['name'] }}</li>
       {% endfor %}
     </ul>
   </body>
-</html>
+</nav>
+<section class="content">
+  <header>{% block header %}{% endblock %}</header>
+  {% for message in get_flashed_messages() %}
+  <div class="flash">{{ message }}</div>
+  {% endfor %} {% block content %}{% endblock %}
+</section>
