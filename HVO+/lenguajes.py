@@ -12,8 +12,8 @@ def idioma():
 
     con = db.get_db()
     res = con.execute(consulta)
-    lista_lenguaje = res.fetchall()
+    lista_lenguajes = res.fetchall()
     paginaLenguaje = render_template("lenguaje.html",
-                              lenguajes=lista_lenguaje)
+                              lenguajes=lista_lenguajes)
     return paginaLenguaje
 

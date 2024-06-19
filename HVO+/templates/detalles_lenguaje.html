@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} Lenguajes {% endblock %}
+{% block encabezado %} Lenguajes {% endblock %}
+{% block contenido %} 
+
+<ul>
+  {% for lenguaje in lenguajes %}
+    <li>{{lenguaje['language'] }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
