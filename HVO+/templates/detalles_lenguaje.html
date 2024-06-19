@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-{% block title %} Lenguajes {% endblock %}
-{% block encabezado %} Lenguajes {% endblock %}
+{% block titulo %} Lenguaje {% endblock %}
+{% block encabezado %} Lenguaje {{lenguaje['name'] }}{% endblock %}
 {% block contenido %} 
-
+<h2>Peliculas</h2>
 <ul>
-  {% for lenguaje in lenguajes %}
-    <li>{{lenguaje['language'] }}</li>
+  {% for pelicula in peliculas %}
+    <li>{{pelicula['titulo'] }}</li>
   {% endfor %}
 </ul>
 

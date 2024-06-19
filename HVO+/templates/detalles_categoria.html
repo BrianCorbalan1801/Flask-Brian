@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block titulo %} {{categoria['name'] }} {% endblock %}
+{% block encabezado %} Categoria {{categoria['name'] }} {% endblock %}
+{% block contenido %} 
+<h2>Peliculas</h2>
+
+<ul>
+    {% for peli in pelis %}
+      <li>{{peli['titulo'] }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
