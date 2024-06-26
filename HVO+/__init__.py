@@ -6,6 +6,7 @@ with app.app_context():
    from . import db
    db.init_app(app)
 
+#Crea unas rutas sencillas
 @app.route('/')
 def hello():
     return 'Hello, World!'
@@ -14,6 +15,7 @@ def hello():
 def quien():
     return 'Hecho por Brian Corbalan!'
 
+#Importa las bases de los archivos.py
 from . import actores
 app.register_blueprint(actores.bp)
 
